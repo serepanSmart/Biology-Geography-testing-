@@ -1,0 +1,158 @@
+@import "mixins";
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: url(https://w-dog.ru/wallpapers/13/13/288123112648444/knigi-knizhki-znaniya-stol-stopka-starinnye-shikarnye-folianty-uchene-svet-a-neuchene-tma-razmytost-boke-makro-seryj-fon-oboi.jpg) center/cover no-repeat;
+}
+
+.App {
+  overflow: hidden;
+}
+
+.container {
+  padding: 15px;
+
+  .row {
+    margin: auto;
+    flex-direction: column;
+  }
+}
+
+
+.buttons-to-test {
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+
+  a {
+    margin: 5px;
+  }
+
+  h1 {
+    padding-bottom: 25px;
+  }
+}
+
+.booksList {
+  margin-bottom: 15px;
+  padding: 25px;
+  background: rgba(218, 223, 204, 0.442);
+  text-align: center;
+  box-shadow: 0 0 5px 2px #fff;
+
+  @include screen (sm) {
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  @include screen (md) {
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  @include screen (lg) {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+
+  [type="text"],
+  select {
+    width: 90%;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(64, 255, 0, 0.265)(153, 150, 150);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    input {
+      margin: 10px;
+    }
+  }
+}
+
+.timer {
+  background: rgb(146, 142, 142);
+  border-radius: 12px;
+  margin-top: 15px;
+
+  span {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.modal,
+.result {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.857);
+  color: red;
+
+  @include screen(sm) {
+    width: 550px;
+    height: 550px;
+  }
+
+  .btn {
+    color: black;
+    margin: 10px;
+  }
+
+}
+
+.btn {
+  width: 200px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px/50%;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &-primary {
+    background: gold;
+
+    &:hover {
+      background: rgba(38, 22, 102, 0.598);
+    }
+  }
+
+  &-secondary {
+    background: rgb(255, 0, 0);
+
+    &:hover {
+      background: rgba(38, 22, 102, 0.598);
+    }
+  }
+}
